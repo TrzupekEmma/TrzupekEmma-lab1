@@ -13,7 +13,9 @@ public class Rotor {
     }
     
     public boolean rotate(){
-    	String out=""+rotorValues.charAt(rotorValues.length()-1);
+    	//make a new string that includes just the last charecter of rotorValues 
+	String out=""+rotorValues.charAt(rotorValues.length()-1);
+	//add all but the last charecter of rotorValues to the new string
     	out+=rotorValues.substring(0,rotorValues.length()-1);
     	rotorValues=out;
 	return(rotorValues.charAt(0)==startChar);
