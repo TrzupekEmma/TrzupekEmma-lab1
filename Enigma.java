@@ -10,7 +10,9 @@ public class Enigma{
     private Rotor rotors[];
         
     public Enigma(int id1, int id2, int id3, String start){
-
+	//this is the preprovided code that selects three rotors out of the list of options
+	//theoretically this should be randomized but you can select any of the three of your choosing.
+	//there is no check that the indices provided are within the range, so this code could throw errors if bad values are given.
         rotors = new Rotor[3];
         rotors[0] = new Rotor(rotorInit[id1-1], start.charAt(0));
         rotors[1] = new Rotor(rotorInit[id2-1], start.charAt(1));
