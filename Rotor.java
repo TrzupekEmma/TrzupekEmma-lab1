@@ -23,10 +23,12 @@ public class Rotor {
     
 
     public int indexOf(char c){
-        return(rotorValues.indexOf(c));
+        //return the string index at a given character
+	return(rotorValues.indexOf(c));
     }
 
     public char charAt(int idx){
+	//return the string character at a given index
     	return(rotorValues.charAt(idx));
     }
 }
