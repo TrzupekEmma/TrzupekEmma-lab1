@@ -13,17 +13,19 @@ public class Rotor {
     }
     
     public boolean rotate(){
-        //TODO
-               
+    	String out=""+rotorValues.charAt(rotorValues.length()-1);
+    	out+=rotorValues.substring(0,rotorValues.length()-1);
+    	rotorValues=out;
+	return(rotorValues.charAt(0)==startChar);
     }
     
 
     public int indexOf(char c){
-        //TODO
+        return(rotorValues.indexOf(c));
     }
 
     public char charAt(int idx){
-        //TODO
+    	return(rotorValues.charAt(idx));
     }
 }
     
