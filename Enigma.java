@@ -37,12 +37,14 @@ public class Enigma{
 
     
     public String encrypt(String message){
-    	String out="";
+    	//The string that will hold encrypted values
+	String out="";
 	for(int i=0;i<message.length();i++){
 		//set index after going inner->outer
 		int index=rotors[0].indexOf(message.charAt(i));
 		//set index after going inner->outer->middle->outer 
 		index=rotors[1].indexOf(rotors[2].charAt(index));
+		//finally add the encrypted character to the output string
 		out+=rotors[2].charAt(index);
 		this.rotate();
 	}
